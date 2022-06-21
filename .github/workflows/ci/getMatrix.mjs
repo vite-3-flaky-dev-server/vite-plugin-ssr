@@ -82,6 +82,7 @@ const testJobs = {
     }],
     testCmd: testCmdE2e,
   },
+  /*
   'https://vite-plugin-ssr.com': {
     testFiles: [],
     setups: [{
@@ -90,6 +91,7 @@ const testJobs = {
     }],
     testCmd: testCmdE2e,
   }
+  */
 }
 
 testFiles.forEach((testFile) => {
@@ -108,9 +110,11 @@ function getCategory(testFile) {
   if (testFile.startsWith('boilerplates/')) {
     return 'Boilerplates'
   }
+  /*
   if (testFile.startsWith('docs/')) {
     return 'https://vite-plugin-ssr.com'
   }
+  */
   if (testFile.startsWith('examples/')) {
     if (testFile.includes('cloudflare')) {
       if (testFile.includes('webpack')) {
